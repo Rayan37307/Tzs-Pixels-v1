@@ -1,0 +1,8 @@
+{
+  "name": "Copy of TZS PIXELS | Automated Growth Systems",
+  "description": "A high-conversion agency building automated sales engines, conversion hubs, and AI-driven business systems for modern founders.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
