@@ -3,49 +3,48 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative pt-40 pb-20 overflow-hidden">
-      {/* Background Orbs */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[800px] pointer-events-none opacity-40">
-        <div className="absolute top-[-10%] left-[10%] w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[140px]" />
-        <div className="absolute top-[20%] right-[10%] w-[400px] h-[400px] bg-purple-600/20 rounded-full blur-[140px]" />
+    <section className="relative pt-32 md:pt-48 pb-20 md:pb-32 overflow-hidden">
+      {/* Dynamic Background Mesh */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-[-20%] left-[-10%] w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[160px] animate-pulse" />
+        <div className="absolute bottom-[-20%] right-[-10%] w-[800px] h-[800px] bg-purple-600/10 rounded-full blur-[160px] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-150 contrast-150 mix-blend-overlay"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
-        <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-black tracking-[0.2em] text-blue-400 mb-10 uppercase">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-          </span>
-          Modern Business Operating Systems
+        <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-[10px] md:text-xs font-bold tracking-[0.2em] text-white mb-10 uppercase backdrop-blur-sm">
+          <span className="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.8)]" />
+          Systems for high-growth founders
         </div>
         
-        <h1 className="text-5xl md:text-8xl font-black tracking-tighter mb-8 leading-[0.95] text-white uppercase">
-          Build Once. <br className="hidden md:block" />
-          <span className="text-gradient">Profit Forever.</span>
+        <h1 className="font-heading text-5xl md:text-8xl font-bold tracking-tight mb-8 leading-[1.05] text-white">
+          We Build High-Performance <br className="hidden md:block" />
+          <span className="text-gradient">Websites & AI Systems</span> <br className="hidden md:block" />
+          That Scale Your Business.
         </h1>
         
-        <p className="max-w-3xl mx-auto text-lg md:text-xl text-gray-400 mb-12 leading-relaxed font-medium">
-          Tzs Pixels builds the automated engines of growth. We turn your digital presence into a 24/7 sales team that books leads, takes payments, and manages follow-ups — so you don't have to.
+        <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-400 mb-12 leading-relaxed font-medium">
+          Tzs Pixels engineers the technical backbone of modern brands. From ultra-fast Next.js hubs to autonomous AI workflows that run your business 24/7.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-          <a href="#contact" className="w-full sm:w-auto px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl font-black text-sm uppercase tracking-widest transition-all shadow-2xl shadow-blue-600/30 active:scale-95">
-            Book Your Free System Audit
+          <a href="#contact" className="w-full sm:w-auto px-10 py-5 bg-white text-black rounded-full font-bold text-sm uppercase tracking-widest transition-all hover:scale-105 hover:bg-gray-200 active:scale-95 shadow-2xl shadow-white/10">
+            🚀 Get a Free Strategy Call
           </a>
-          <a href="#services" className="w-full sm:w-auto px-10 py-5 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-2xl font-black text-sm uppercase tracking-widest transition-all active:scale-95">
-            View Our Solutions
+          <a href="#portfolio" className="w-full sm:w-auto px-10 py-5 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full font-bold text-sm uppercase tracking-widest transition-all backdrop-blur-sm active:scale-95">
+            📂 View Our Work
           </a>
         </div>
 
-        <div className="mt-24 pt-12 border-t border-white/5">
-          <p className="text-[10px] font-black text-gray-600 uppercase tracking-[0.3em] mb-10">Trusted to Run Critical Systems For</p>
-          <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20 opacity-30 grayscale brightness-200">
-             <div className="text-xl md:text-2xl font-black italic tracking-tighter">ELITE_CLINIC</div>
-             <div className="text-xl md:text-2xl font-black italic tracking-tighter">CORE_GYMS</div>
-             <div className="text-xl md:text-2xl font-black italic tracking-tighter">PRIME_LAW</div>
-             <div className="text-xl md:text-2xl font-black italic tracking-tighter">SKY_TRAVEL</div>
-             <div className="text-xl md:text-2xl font-black italic tracking-tighter">TECH_FORGE</div>
-          </div>
+        <div className="mt-24 flex flex-col items-center gap-8">
+           <p className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.4em]">Engineered with modern tech</p>
+           <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 opacity-40 grayscale hover:opacity-80 transition-opacity duration-500">
+             <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" alt="Next.js" className="h-6 md:h-8 invert" />
+             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" className="h-6 md:h-8" />
+             <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Tailwind" className="h-6 md:h-8" />
+             <div className="text-xl md:text-2xl font-bold text-white tracking-tighter italic">N8N.IO</div>
+             <div className="text-xl md:text-2xl font-bold text-white tracking-tighter italic">SUPABASE</div>
+           </div>
         </div>
       </div>
     </section>

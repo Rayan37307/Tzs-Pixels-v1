@@ -12,148 +12,202 @@ import {
   TrendingUp,
   Cpu,
   Layers,
-  ShieldCheck
+  ShieldCheck,
+  Code2,
+  Workflow,
+  Sparkles
 } from 'lucide-react';
 
 export const COLORS = {
   primary: '#3b82f6',
-  secondary: '#8b5cf6',
-  background: '#0a0a0a',
-  surface: '#171717',
+  secondary: '#a855f7',
+  background: '#000000',
+  surface: '#0a0a0a',
 };
 
 export const SERVICES = [
   {
-    title: 'Conversion Hubs',
-    problem: 'You have a website, but it’s just a digital brochure that doesn’t sell.',
-    solution: 'We build high-speed systems engineered to turn strangers into customers.',
-    result: 'A digital storefront that actually pays for itself through leads.',
-    icon: <Globe className="w-8 h-8 text-blue-500" />
+    title: 'Web Development',
+    problem: 'Your site is slow, unresponsive, and fails to convert visitors.',
+    solution: 'We build ultra-fast, Next.js conversion hubs that dominate SEO.',
+    result: 'Zero lag. High retention. Maximum revenue.',
+    icon: <Code2 className="w-8 h-8 text-blue-500" />
   },
   {
-    title: '24/7 AI Closers',
-    problem: 'Leads are messaging you at 2 AM, and you’re losing them to the competition.',
-    solution: 'AI agents that respond instantly on WhatsApp, IG, and Web to book appointments.',
-    result: 'Wake up to a calendar full of pre-qualified bookings.',
-    icon: <Bot className="w-8 h-8 text-purple-500" />
+    title: 'AI Automation',
+    problem: 'Manual tasks are bleeding your company time and profit every day.',
+    solution: 'Custom n8n and Python workflows that run your business on autopilot.',
+    result: 'Save 100+ hours monthly. Eliminate human error.',
+    icon: <Workflow className="w-8 h-8 text-purple-500" />
   },
   {
-    title: 'The Invisible Workforce',
-    problem: 'You’re spending 15+ hours a week on invoices, follow-ups, and data entry.',
-    solution: 'Custom automations that connect your entire business behind the scenes.',
-    result: 'Buy back your time and eliminate human error from your operations.',
-    icon: <Zap className="w-8 h-8 text-yellow-500" />
+    title: 'Chatbot Ecosystems',
+    problem: 'You miss customers because you can\'t reply to messages at 3 AM.',
+    solution: 'Intelligent WhatsApp, IG, and Web bots that qualify and close leads.',
+    result: '24/7 sales coverage. 100% response rate.',
+    icon: <MessageSquare className="w-8 h-8 text-blue-400" />
   },
   {
-    title: 'Central Command',
-    problem: 'You don’t know your numbers because your data is scattered across 5 apps.',
-    solution: 'One custom dashboard to track every lead, sale, and automation in real-time.',
-    result: 'Total clarity. You finally know exactly what’s working and what isn’t.',
-    icon: <BarChart3 className="w-8 h-8 text-green-500" />
+    title: 'Business Intel',
+    problem: 'You are making decisions based on "gut feeling" instead of data.',
+    solution: 'Live performance dashboards that sync all your business apps.',
+    result: 'Total visibility. Strategic growth. Data-backed scaling.',
+    icon: <BarChart3 className="w-8 h-8 text-purple-400" />
   }
 ];
 
 export const STEPS = [
   {
     number: '01',
-    title: 'The Efficiency Audit',
-    description: 'We map your current manual bottlenecks and identify exactly where you are losing revenue.'
+    title: 'Discovery & Strategy',
+    description: 'We audit your manual workflows and identify the high-impact automation opportunities.'
   },
   {
     number: '02',
-    title: 'System Architecture',
-    description: 'Our engineers build your conversion hub and custom AI workflows to handle your repetitive tasks.'
+    title: 'System Prototyping',
+    description: 'We design the architecture for your high-performance site and AI logic.'
   },
   {
     number: '03',
-    title: 'The "Go-Live" Sync',
-    description: 'We integrate your new system with your existing tools, ensuring a seamless handover to the robots.'
+    title: 'Development & Build',
+    description: 'Our engineers build your custom systems using modern, scalable tech stacks.'
   },
   {
     number: '04',
-    title: 'Optimization & Scale',
-    description: 'We don’t just launch and leave. We monitor, tweak, and optimize your systems for maximum ROI.'
+    title: 'Launch & Scaling',
+    description: 'We deploy your system and continuously optimize for peak conversion performance.'
   }
 ];
 
-export const USE_CASES = [
+export const CASE_STUDIES = [
   {
-    title: 'Never Miss a Lead',
-    description: 'Instant AI replies on WhatsApp & Instagram that turn inquiries into clients while you sleep.',
-    icon: <MessageSquare className="w-6 h-6" />
+    title: 'MedFlow Clinic',
+    category: 'AI Booking System',
+    problem: '60% of bookings lost to phone tag.',
+    solution: 'WhatsApp AI Booking Agent + CRM Sync.',
+    result: '3.5x booking increase in 30 days.',
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800'
   },
   {
-    title: 'Hands-Free Booking',
-    description: 'Client wants a slot? The system checks your calendar and takes the deposit automatically.',
-    icon: <Calendar className="w-6 h-6" />
+    title: 'Titan Real Estate',
+    category: 'High-Performance Web',
+    problem: 'Slow site causing high bounce rates.',
+    solution: 'Next.js conversion hub with headless CMS.',
+    result: '98/100 Lighthouse score & 40% more leads.',
+    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=800'
   },
   {
-    title: 'Auto-Nurture Pipeline',
-    description: 'Automated follow-ups that keep your brand top-of-mind until the lead is ready to buy.',
-    icon: <TrendingUp className="w-6 h-6" />
+    title: 'SolarScale SaaS',
+    category: 'Workflow Automation',
+    problem: 'Lead processing took 48 hours manually.',
+    solution: 'n8n automation connecting FB Ads to CRM.',
+    result: 'Instant lead response & 50% lower CPA.',
+    image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800'
+  }
+];
+
+export const TESTIMONIALS = [
+  {
+    name: 'Sarah Jenkins',
+    role: 'CEO, MedFlow',
+    content: 'TZS Pixels didn\'t just build a website; they built a revenue engine. Our AI booking agent is now our best employee.'
   },
   {
-    title: 'Unified Sales Hub',
-    description: 'Every message from every platform synced into one dashboard for your team to manage.',
-    icon: <ShieldCheck className="w-6 h-6" />
+    name: 'Marcus Thorne',
+    role: 'Founder, SolarScale',
+    content: 'The automation workflows they built saved us two full-time salaries in administrative work. Highly recommended.'
+  },
+  {
+    name: 'Elena Rodriguez',
+    role: 'Marketing Director, Titan',
+    content: 'Finally, an agency that understands that speed is a feature. Our new site is incredibly fast and actually converts.'
   }
 ];
 
 export const WHY_CHOOSE_US = [
   {
-    title: 'Engineered, Not "No-Code"',
-    description: 'We build custom, scalable code that your business can actually grow on.',
-    icon: <Cpu className="w-10 h-10 text-blue-500" />
+    title: 'Fast Delivery',
+    description: 'We work in agile sprints to ship production-ready systems in weeks.',
+    icon: <Zap className="w-10 h-10 text-blue-500" />
   },
   {
-    title: 'Speed to Market',
-    description: 'We ship production-ready systems in weeks, getting you to ROI faster.',
-    icon: <Clock className="w-10 h-10 text-purple-500" />
+    title: 'AI-First Thinking',
+    description: 'We don\'t just add AI as a gimmick. It\'s the core of how we optimize your business.',
+    icon: <Sparkles className="w-10 h-10 text-purple-500" />
   },
   {
-    title: 'Partners, Not Vendors',
-    description: 'We act as your fractional CTO, managing the tech so you can manage the growth.',
-    icon: <Layers className="w-10 h-10 text-pink-500" />
+    title: 'Business-Driven',
+    description: 'Every line of code we write is focused on your bottom-line results.',
+    icon: <TrendingUp className="w-10 h-10 text-pink-500" />
+  },
+  {
+    title: 'Secure & Scalable',
+    description: 'Built with enterprise-grade security to grow as your business grows.',
+    icon: <ShieldCheck className="w-10 h-10 text-green-500" />
+  }
+];
+
+// Added USE_CASES export to resolve the missing member error in UseCases.tsx
+export const USE_CASES = [
+  {
+    title: 'Lead Intake Automation',
+    description: 'Stop wasting time manually entering data. We automate lead capture from ads directly into your CRM.',
+    icon: <MessageSquare className="w-6 h-6" />
+  },
+  {
+    title: 'AI Appointment Setting',
+    description: 'A dedicated AI agent that handles back-and-forth scheduling via WhatsApp or SMS 24/7.',
+    icon: <Calendar className="w-6 h-6" />
+  },
+  {
+    title: 'Dynamic Content Hubs',
+    description: 'High-speed Next.js sites that update automatically from your Google Sheets or Notion databases.',
+    icon: <Zap className="w-6 h-6" />
+  },
+  {
+    title: 'Performance Dashboards',
+    description: 'Real-time visibility into your business ROI, syncing data from Stripe, Facebook Ads, and more.',
+    icon: <BarChart3 className="w-6 h-6" />
   }
 ];
 
 export const PRICING_PLANS = [
   {
     name: 'Launch',
-    price: '$1,499',
-    description: 'Essential systems for local businesses ready to automate their first leads.',
+    price: '$2,500',
+    description: 'Establish your presence with an automated high-performance system.',
     features: [
-      'High-Conversion Landing Page',
-      'Basic AI Lead Capture (Web)',
-      'WhatsApp Integration',
-      'Automated Lead Notifications',
-      '30-Day Launch Support'
+      'Custom Next.js Landing Page',
+      'AI Lead Capture Engine',
+      'CRM Integration',
+      'Basic Workflow Automation',
+      '90-Day Performance Audit'
     ]
   },
   {
     name: 'Growth',
-    price: '$3,499',
-    description: 'Complete automation suite for businesses scaling their operations.',
+    price: '$5,000',
+    description: 'The standard for businesses ready to dominate their market.',
     features: [
-      'Full Multi-Page Conversion Hub',
-      '24/7 AI Booking Agent (IG/WA)',
-      'CRM & Email Auto-Nurture',
-      'Inventory/Service Automations',
-      'Ongoing System Optimization',
+      'Full Multi-Page Platform',
+      '24/7 AI Sales Agent (WA/IG)',
+      'Advanced Multi-App Automation',
+      'Performance Dashboard',
+      'SEO Content Strategy',
       'Priority Tech Support'
     ],
     recommended: true
   },
   {
-    name: 'Dominance',
+    name: 'Elite',
     price: 'Custom',
-    description: 'Full-scale custom systems for high-volume, multi-location businesses.',
+    description: 'Custom infrastructure for complex operations and high volume.',
     features: [
-      'Custom SaaS Dashboard',
-      'Multi-Platform Bot Ecosystem',
-      'Advanced API Sync (Custom n8n)',
-      'Dedicated Fractional CTO',
-      'Monthly Strategy & Scale Calls',
+      'Full-Scale Custom Software',
+      'Multi-Model AI Integration',
+      'Internal Operation Dashboards',
+      'Dedicated Tech Squad',
+      'Monthly Strategic Reviews',
       '24/7 Uptime Monitoring'
     ]
   }

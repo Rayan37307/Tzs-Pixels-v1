@@ -3,9 +3,10 @@ import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
+import Portfolio from './components/Portfolio';
 import HowItWorks from './components/HowItWorks';
-import UseCases from './components/UseCases';
 import WhyChooseUs from './components/WhyChooseUs';
+import Testimonials from './components/Testimonials';
 import Pricing from './components/Pricing';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -19,8 +20,7 @@ function App() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('opacity-100');
-          entry.target.classList.remove('opacity-0', 'translate-y-10');
+          entry.target.classList.add('animate-fade-in');
         }
       });
     }, observerOptions);
@@ -29,51 +29,52 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen selection:bg-blue-600 selection:text-white bg-[#050505]">
+    <div className="min-h-screen selection:bg-blue-600 selection:text-white bg-[#000000]">
       <Navbar />
       <main>
         <Hero />
         
-        {/* Value Marquee */}
-        <div className="bg-white py-5 overflow-hidden whitespace-nowrap border-y border-white/10">
-          <div className="flex animate-marquee items-center gap-12 text-black font-black text-sm md:text-lg uppercase tracking-[0.2em] italic">
-            <span>Automate Leads</span>
-            <span>•</span>
-            <span>Scale Bookings</span>
-            <span>•</span>
-            <span>Zero Manual Work</span>
-            <span>•</span>
-            <span>Fractional CTO</span>
-            <span>•</span>
-            <span>Conversion First</span>
-            <span>•</span>
-            <span>Automate Leads</span>
-            <span>•</span>
-            <span>Scale Bookings</span>
+        {/* Modern Infinite Scroller */}
+        <div className="bg-white py-6 md:py-8 overflow-hidden whitespace-nowrap border-y border-white/10 relative z-20">
+          <div className="flex animate-marquee items-center gap-12 text-black font-black text-xs md:text-base uppercase tracking-[0.3em] italic">
+            <span>Engineering ROI</span>
+            <span className="opacity-20">•</span>
+            <span>Ultra-Fast Next.js</span>
+            <span className="opacity-20">•</span>
+            <span>AI Automation</span>
+            <span className="opacity-20">•</span>
+            <span>Lead Gen Engines</span>
+            <span className="opacity-20">•</span>
+            <span>Vercel Partners</span>
+            <span className="opacity-20">•</span>
+            <span>Scalable Systems</span>
+            <span className="opacity-20">•</span>
+            <span>Engineering ROI</span>
+            <span className="opacity-20">•</span>
+            <span>Ultra-Fast Next.js</span>
           </div>
         </div>
 
         <Services />
-        <HowItWorks />
-        <UseCases />
         <WhyChooseUs />
+        <Portfolio />
+        <HowItWorks />
+        <Testimonials />
         <Pricing />
         
-        {/* Strategic CTA */}
-        <section className="py-32 bg-blue-600 text-center px-6 relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
-          </div>
-          <div className="max-w-4xl mx-auto relative z-10">
-            <h2 className="text-4xl md:text-7xl font-black mb-10 uppercase tracking-tighter text-white leading-none">
-              Build a Business <br /> That Runs Itself.
+        {/* High-Impact CTA */}
+        <section className="py-40 bg-gradient-to-b from-[#000] to-[#050505] text-center px-6 relative overflow-hidden">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none opacity-50"></div>
+          <div className="max-w-5xl mx-auto relative z-10">
+            <h2 className="font-heading text-5xl md:text-8xl font-bold mb-10 uppercase tracking-tighter text-white leading-none">
+              Ready to <span className="text-gradient">Scale?</span>
             </h2>
-            <p className="text-blue-100 text-lg md:text-xl font-medium mb-12 max-w-2xl mx-auto">
-              Ready to stop being a bottleneck in your own growth? Book your free system audit and let us show you the roadmap to automation.
+            <p className="text-gray-400 text-lg md:text-2xl font-medium mb-12 max-w-2xl mx-auto leading-relaxed">
+              Stop guessing. Start building. Book your strategy call today and let's engineer your competitive advantage.
             </p>
-            <button className="px-12 py-6 bg-white text-blue-600 font-black text-sm md:text-base uppercase tracking-widest rounded-3xl hover:scale-105 transition-all active:scale-95 shadow-2xl">
-              Get Your Free System Audit
-            </button>
+            <a href="#contact" className="inline-block px-12 py-6 bg-blue-600 text-white font-bold text-sm md:text-base uppercase tracking-[0.2em] rounded-full hover:scale-105 transition-all active:scale-95 shadow-2xl shadow-blue-600/40">
+              Book Free Consultation
+            </a>
           </div>
         </section>
 
@@ -88,11 +89,14 @@ function App() {
         }
         .animate-marquee {
           display: inline-flex;
-          animation: marquee 30s linear infinite;
+          animation: marquee 40s linear infinite;
         }
-        html {
-          scrollbar-width: thin;
-          scrollbar-color: #333 #050505;
+        .animate-fade-in {
+          animation: fadeIn 0.8s ease-out forwards;
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
         }
       `}</style>
     </div>
